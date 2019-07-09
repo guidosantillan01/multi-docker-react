@@ -22,3 +22,16 @@ after_success:
   - docker push guidosantillan01/multi-nginx
   - docker push guidosantillan01/multi-server
   - docker push guidosantillan01/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: sa-east-1
+  app: multi-docker-react
+  env: MultiDockerReact-env
+  bucket_name: elasticbeanstalk-sa-east-1-570620208014
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
