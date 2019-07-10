@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header>
-          <h1>Learn React</h1>
+          <h1>Fib Calculator</h1>
           <ul>
             <li>
               <Link to="/">Home</Link>
